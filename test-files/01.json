@@ -1,0 +1,15 @@
+{
+     "firstName": "Emma",
+     "lastName": "Svensson",
+     "age": 25,
+     "address": {
+         "street": "Drottninggatan 47",
+         "city": "Boden",
+         "zipcode": "96177"
+     },
+     "phoneNumbers": [
+         { "type": "mobil", "number": "070 123 45 67" },
+         { "type": "fax", "number": "646 555-4567" }
+     ],
+     "companyName": null
+ }
