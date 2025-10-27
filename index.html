@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber:Bott OS Edition</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <a href="#maincontent" class="skip-link">Skip to main content</a> <!-- Viktig för AAA -->
+
+  <header role="banner">
+    <h1 id="pageTitle">Cyber:Bott OS Edition</h1>
+    <p>A visionary standalone operating system, engineered by FÈUE FSS</p>
+    <label for="fontSelector" style="color:#39ff14; margin-top:1rem; display:inline-block;">Choose Font:</label>
+    <select id="fontSelector" aria-label="Choose font for page">
+      <option value="'Audiowide', cursive" selected>Audiowide</option>
+      <option value="'Orbitron', monospace">Orbitron</option>
+      <option value="'Share Tech Mono', monospace">Share Tech Mono</option>
+      <option value="'Major Mono Display', monospace">Major Mono Display</option>
+    </select>
+  </header>
+
+  <main id="maincontent" role="main">
+    <section id="about">
+      <h2>About</h2>
+      <p><strong>Cyber:Bott OS Edition</strong> is a bold and independent operating system developed from scratch by <strong>FÈUE FSS</strong>. Designed exclusively for modern <em>UEFI</em> systems, it represents the future of OS innovation (a Hello World BIOS version is also available).</p>
+    </section>
+
+    <section id="roadmap">
+      <h2>Roadmap</h2>
+      <ul>
+        <li>Display "Hello World" on screen</li>
+        <li>Build a stable system API</li>
+        <li>Develop a graphical shutdown interface</li>
+        <li>First public release.</li>
+      </ul>
+    </section>
+
+    <section id="ficbuefi">
+      <h2>Features in CyberBoot UEFI</h2>
+      <ul>
+        <li>Informational GUI</li>
+        <li>Test Shutdown GUI</li>
+        <li>Custom API for FÈUE FSS Cyber:Bott OS Edition</li>
+      </ul>
+    </section>
+
+    <section id="download">
+      <h2>Download</h2>
+      <p>Coming soon for UEFI!</p>
+      <br />
+      <a href="boot_bios.img" download="Boot_BIOS.img" aria-label="Download BIOS boot image, size 1,440 kilobytes">BIOS download (1 440 kB)</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Questions or feedback? Reach out via email at
+        <a href="mailto:feue.com1@outlook.com" style="color:#39ff14;" aria-label="Send email to feue.com1 at outlook.com">
+          feue.com1@outlook.com
+        </a>
+      </p>
+    </section>
+
+    <section id="uefi-scs">
+      <h2>UEFI SCS</h2>
+      <p>
+        SCS is standing for system crash screen. The SCS is only in the UEFI version of Cyber::Boot. SCS is Cyber::Boot's BSOD.
+        <br>
+        Error code:
+        <br>
+        1 = Testing
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    © 2025 FÈUE FSS | All rights reserved
+    <br />
+    <button id="toggleRoadmap" aria-pressed="false" aria-label="Toggle light and dark mode">Switch to Light Mode</button>
+    <br />
+    <p>
+      Portions of this source code are based on work by
+      <a href="https://www.youtube.com/@quesofuego" target="_blank" rel="noopener noreferrer" aria-label=" Open Queso Fuego's YouTube channel in a new tab">
+        Queso Fuego
+      </a>,
+      published under the
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" aria-label= "Open Creative Commons Attribution 4.0 License details in a new tab">
+        Creative Commons Attribution 4.0 License
+      </a>.
+      Original material available at
+      <a href="https://www.youtube.com/playlist?list=PLT7NbkyNWaqZYHNLtOZ1MNxOt8myP5K0p" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube playlist in a new tab">
+        this YouTube playlist
+      </a>.
+     Parts of CB's headers and code are from EDK2 (Github: https://github.com/tianocore/edk2 and the Company's website: https://www.tianocore.org/). 
+    </p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleRoadmap');
+    const fontSelector = document.getElementById('fontSelector');
+    const pageTitle = document.getElementById('pageTitle');
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      const isLight = document.body.classList.contains('light');
+      toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      toggleBtn.setAttribute('aria-pressed', isLight.toString());
+    });
+
+    fontSelector.addEventListener('change', () => {
+      const font = fontSelector.value;
+      document.body.style.fontFamily = font;
+      pageTitle.style.fontFamily = font;
+    });
+  </script>
+</body>
+</html>
